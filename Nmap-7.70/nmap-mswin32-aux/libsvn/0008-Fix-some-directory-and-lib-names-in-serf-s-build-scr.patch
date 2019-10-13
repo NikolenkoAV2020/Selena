@@ -1,0 +1,40 @@
+From 0270b035cfb29604751d9efcef9ef7a08a2b4949 Mon Sep 17 00:00:00 2001
+From: Daniel Miller <dmiller@nmap.com>
+Date: Sat, 22 Nov 2014 05:04:47 -0800
+Subject: [PATCH 08/14] Fix some directory and lib names in serf's build script
+
+---
+ src-trunk/serf/SConstruct | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/src-trunk/serf/SConstruct b/src-trunk/serf/SConstruct
+index 0e4f988..800e1ea 100644
+--- a/src-trunk/serf/SConstruct
++++ b/src-trunk/serf/SConstruct
+@@ -307,7 +307,7 @@ if sys.platform == 'win32':
+                CPPPATH=['$APR/include', '$APU/include'])
+ 
+   # zlib
+-  env.Append(LIBS='zlib.lib')
++  env.Append(LIBS='zlibstat.lib')
+   if not env.get('SOURCE_LAYOUT', None):
+     env.Append(CPPPATH='$ZLIB/include',
+                LIBPATH='$ZLIB/lib')
+@@ -321,11 +321,11 @@ if sys.platform == 'win32':
+     env.Append(CPPPATH='$OPENSSL/include/openssl',
+                LIBPATH='$OPENSSL/lib')
+   elif 0: # opensslstatic:
+-    env.Append(CPPPATH='$OPENSSL/inc32',
++    env.Append(CPPPATH='$OPENSSL/include',
+                LIBPATH='$OPENSSL/out32')
+   else:
+-    env.Append(CPPPATH='$OPENSSL/inc32',
+-               LIBPATH='$OPENSSL/out32dll')
++    env.Append(CPPPATH='$OPENSSL/include',
++               LIBPATH='$OPENSSL/lib')
+ else:
+   if os.path.isdir(apr):
+     apr = os.path.join(apr, 'bin', 'apr-1-config')
+-- 
+2.1.1
+

@@ -1,0 +1,81 @@
+From e65450621be8ded3f94e31438af3ae5d1b518cc0 Mon Sep 17 00:00:00 2001
+From: Daniel Miller <dmiller@nmap.com>
+Date: Sat, 22 Nov 2014 05:18:02 -0800
+Subject: [PATCH 10/14] Remove some unneeded projects from the apr build
+
+---
+ apr-util/aprutil.sln     |   8 --------
+ 1 files changed, 8 deletions(-)
+
+diff --git a/apr-util/aprutil.sln b/apr-util/aprutil.sln
+index f35468e..461690a 100755
+--- a/apr-util/aprutil.sln
++++ b/apr-util/aprutil.sln
+@@ -413,7 +413,6 @@ Global
+ 		{728A7A7C-D518-4355-A25E-6EAA45D77804}.DebugNT|x64.ActiveCfg = Debug|x64
+ 		{728A7A7C-D518-4355-A25E-6EAA45D77804}.DebugNT|x64.Build.0 = Debug|x64
+ 		{728A7A7C-D518-4355-A25E-6EAA45D77804}.Release|Win32.ActiveCfg = Release|Win32
+-		{728A7A7C-D518-4355-A25E-6EAA45D77804}.Release|Win32.Build.0 = Release|Win32
+ 		{728A7A7C-D518-4355-A25E-6EAA45D77804}.Release|x64.ActiveCfg = Release|x64
+ 		{728A7A7C-D518-4355-A25E-6EAA45D77804}.Release|x64.Build.0 = Release|x64
+ 		{728A7A7C-D518-4355-A25E-6EAA45D77804}.Release9x|Win32.ActiveCfg = Release|Win32
+@@ -525,7 +524,6 @@ Global
+ 		{DEE4F56C-E928-47DC-8084-5524F7E3E47B}.DebugNT|x64.ActiveCfg = Debug|x64
+ 		{DEE4F56C-E928-47DC-8084-5524F7E3E47B}.DebugNT|x64.Build.0 = Debug|x64
+ 		{DEE4F56C-E928-47DC-8084-5524F7E3E47B}.Release|Win32.ActiveCfg = Release|Win32
+-		{DEE4F56C-E928-47DC-8084-5524F7E3E47B}.Release|Win32.Build.0 = Release|Win32
+ 		{DEE4F56C-E928-47DC-8084-5524F7E3E47B}.Release|x64.ActiveCfg = Release|x64
+ 		{DEE4F56C-E928-47DC-8084-5524F7E3E47B}.Release|x64.Build.0 = Release|x64
+ 		{DEE4F56C-E928-47DC-8084-5524F7E3E47B}.Release9x|Win32.ActiveCfg = Release9x|Win32
+@@ -553,7 +551,6 @@ Global
+ 		{373EE2E9-5332-42F1-8E51-BD3B5CB04385}.DebugNT|x64.ActiveCfg = Debug|x64
+ 		{373EE2E9-5332-42F1-8E51-BD3B5CB04385}.DebugNT|x64.Build.0 = Debug|x64
+ 		{373EE2E9-5332-42F1-8E51-BD3B5CB04385}.Release|Win32.ActiveCfg = Release|Win32
+-		{373EE2E9-5332-42F1-8E51-BD3B5CB04385}.Release|Win32.Build.0 = Release|Win32
+ 		{373EE2E9-5332-42F1-8E51-BD3B5CB04385}.Release|x64.ActiveCfg = Release|x64
+ 		{373EE2E9-5332-42F1-8E51-BD3B5CB04385}.Release|x64.Build.0 = Release|x64
+ 		{373EE2E9-5332-42F1-8E51-BD3B5CB04385}.Release9x|Win32.ActiveCfg = Release9x|Win32
+@@ -581,7 +578,6 @@ Global
+ 		{4E2066DB-3A9B-4F64-9E89-EBBCCE6A0731}.DebugNT|x64.ActiveCfg = Debug|x64
+ 		{4E2066DB-3A9B-4F64-9E89-EBBCCE6A0731}.DebugNT|x64.Build.0 = Debug|x64
+ 		{4E2066DB-3A9B-4F64-9E89-EBBCCE6A0731}.Release|Win32.ActiveCfg = Release|Win32
+-		{4E2066DB-3A9B-4F64-9E89-EBBCCE6A0731}.Release|Win32.Build.0 = Release|Win32
+ 		{4E2066DB-3A9B-4F64-9E89-EBBCCE6A0731}.Release|x64.ActiveCfg = Release|x64
+ 		{4E2066DB-3A9B-4F64-9E89-EBBCCE6A0731}.Release|x64.Build.0 = Release|x64
+ 		{4E2066DB-3A9B-4F64-9E89-EBBCCE6A0731}.Release9x|Win32.ActiveCfg = Release|Win32
+@@ -609,7 +605,6 @@ Global
+ 		{8D8DD5C6-8B06-4EA4-8B4F-E0B7201902EF}.DebugNT|x64.ActiveCfg = DebugNT|x64
+ 		{8D8DD5C6-8B06-4EA4-8B4F-E0B7201902EF}.DebugNT|x64.Build.0 = DebugNT|x64
+ 		{8D8DD5C6-8B06-4EA4-8B4F-E0B7201902EF}.Release|Win32.ActiveCfg = Release|Win32
+-		{8D8DD5C6-8B06-4EA4-8B4F-E0B7201902EF}.Release|Win32.Build.0 = Release|Win32
+ 		{8D8DD5C6-8B06-4EA4-8B4F-E0B7201902EF}.Release|x64.ActiveCfg = Release|x64
+ 		{8D8DD5C6-8B06-4EA4-8B4F-E0B7201902EF}.Release|x64.Build.0 = Release|x64
+ 		{8D8DD5C6-8B06-4EA4-8B4F-E0B7201902EF}.Release9x|Win32.ActiveCfg = Release9x|Win32
+@@ -637,7 +632,6 @@ Global
+ 		{35578E78-DC17-49CC-8A44-99E191262559}.DebugNT|x64.ActiveCfg = DebugNT|x64
+ 		{35578E78-DC17-49CC-8A44-99E191262559}.DebugNT|x64.Build.0 = DebugNT|x64
+ 		{35578E78-DC17-49CC-8A44-99E191262559}.Release|Win32.ActiveCfg = Release|Win32
+-		{35578E78-DC17-49CC-8A44-99E191262559}.Release|Win32.Build.0 = Release|Win32
+ 		{35578E78-DC17-49CC-8A44-99E191262559}.Release|x64.ActiveCfg = Release|x64
+ 		{35578E78-DC17-49CC-8A44-99E191262559}.Release|x64.Build.0 = Release|x64
+ 		{35578E78-DC17-49CC-8A44-99E191262559}.Release9x|Win32.ActiveCfg = Release9x|Win32
+@@ -665,7 +659,6 @@ Global
+ 		{5808FDA5-76B1-43B7-875A-38A19210C462}.DebugNT|x64.ActiveCfg = Debug|x64
+ 		{5808FDA5-76B1-43B7-875A-38A19210C462}.DebugNT|x64.Build.0 = Debug|x64
+ 		{5808FDA5-76B1-43B7-875A-38A19210C462}.Release|Win32.ActiveCfg = Release|Win32
+-		{5808FDA5-76B1-43B7-875A-38A19210C462}.Release|Win32.Build.0 = Release|Win32
+ 		{5808FDA5-76B1-43B7-875A-38A19210C462}.Release|x64.ActiveCfg = Release|x64
+ 		{5808FDA5-76B1-43B7-875A-38A19210C462}.Release|x64.Build.0 = Release|x64
+ 		{5808FDA5-76B1-43B7-875A-38A19210C462}.Release9x|Win32.ActiveCfg = Release|Win32
+@@ -777,7 +770,6 @@ Global
+ 		{2D1FEBF8-7C90-4B87-8AC8-2F44CAA4DC8C}.DebugNT|x64.ActiveCfg = Debug|x64
+ 		{2D1FEBF8-7C90-4B87-8AC8-2F44CAA4DC8C}.DebugNT|x64.Build.0 = Debug|x64
+ 		{2D1FEBF8-7C90-4B87-8AC8-2F44CAA4DC8C}.Release|Win32.ActiveCfg = Release|Win32
+-		{2D1FEBF8-7C90-4B87-8AC8-2F44CAA4DC8C}.Release|Win32.Build.0 = Release|Win32
+ 		{2D1FEBF8-7C90-4B87-8AC8-2F44CAA4DC8C}.Release|x64.ActiveCfg = Release|x64
+ 		{2D1FEBF8-7C90-4B87-8AC8-2F44CAA4DC8C}.Release|x64.Build.0 = Release|x64
+ 		{2D1FEBF8-7C90-4B87-8AC8-2F44CAA4DC8C}.Release9x|Win32.ActiveCfg = Release9x|Win32
+
+-- 
+2.1.1
+

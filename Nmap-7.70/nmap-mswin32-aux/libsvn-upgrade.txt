@@ -1,0 +1,60 @@
+First, do the import in VS2013 (make sure you can write to the directory)
+Save the solution.
+
+Some (all?) of these expect to output projectname-1.lib, but VS2013 guesses wrong:
+find . \( -name 'xml' -prune -false \) -o -name '*.vcxproj' -exec sed -i.bak '/PropertyGroup.*Release|Win32..>/a<TargetName>$(ProjectName)-1</TargetName>' {} \;
+
+https://groups.google.com/forum/#!topic/aprdev/bc1ILvUe-fk
+Edit apr/atomic/win32/apr_atomic.c and copy the "if 64" parts to the "else" area (hack!)
+
+/* Didn't need this
+ * Configure libapr to output a static lib
+ * libaprutil -> linker -> input -> Additional dependencies: add Rpcrt4.lib
+ */
+$ sed -i -e '1i#define APR_DECLARE_STATIC 1' apr/include/apr.hw
+$ sed -i -e '1i#define APU_DECLARE_STATIC 1' apr-util/include/apu.hw
+$ sed -i -e '1i#define API_DECLARE_STATIC 1' apr-iconv/include/apr_iconv.h
+
+apr-iconv/build/modules.mk.win:
+$(MODRES).pch:
+        $(SILENT)echo #define ICONV_INTERNAL > $*.c
+        $(SILENT)echo #include "iconv.h" >> $*.c
+    $(SILENT)cl $(ALL_CFLAGS) /Fo$*.obj /Yciconv.h /c $*.c
+
+.c{$(OUTPUT_DIR)}.so:
+    $(SILENT)cl $(ALL_CFLAGS) /Fo$*.obj /Yuiconv.h /c $<
+    $(SILENT)link $(ALL_LDFLAGS) $(MODRES).obj $*.obj $(API_LIBS) /out:$@ \
+        /base:@"..\build\BaseAddr.ref",$(@F)
+    $(SILENT)if exist $@.manifest \
+        $(SILENT)mt -nologo -manifest $@.manifest -outputresource:$@;2 \
+        & del "$@.manifest"
+    $(SILENT)del "$*.exp" & del "$*.lib"
+
+libapriconv: Ws2_32.lib
+
+The python command now creates a .sln file, not a .dsw file
+--vsnet-version=2013
+Switched from neon to serf in 1.8
+OpenSSL must be on same drive letter
+
+build zlib with build/win32/vcnet-vcproj/build_zlib.bat (using Developer Command Line)
+- Invoke devenv from within cygwin to see what happens before devenv quits:
+- $ cmd /k 'C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\VsDevCmd.bat'
+- > .\build_zlib.bat release Win32
+Build serf:
+* Install scons from www.scons.org (requires 32-bit Python installed)
+* Fix some path issues in SConstruct: s/zlib/zlibstat/; s/inc32/include/; s/out32dll/lib/;
+* C:\Python27\Scripts\scons.bat APR=..\..\apr APU=..\..\apr-util OPENSSL=..\..\..\OpenSSL ZLIB=..\zlib APR_STATIC=1
+
+---Here down was old stuff before I knew about --vsnet-version=2013
+add appropriate TargetNames
+cd src-trunk/build/win32/; for f in *.vcxproj; do n=$(perl -ne 'if(/OutputFile>..OutDir.([^\.]+)/{print$1;exit}' $f); test -n "$n" && sed -i.bak "/PropertyGroup.*Release|Win32..>/a<TargetName>$n</TargetName>" $f; done
+
+disable SafeSEH:
+sed -i.bak "/<Link>/a<ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>" *.vcxproj
+
+add missing dependencies (to Release build!):
+libsvn_fs,_subr,_delta,_ra_svn,_wc,_ra: aprutil-1.lib (..\..\..\..\apr-util\LibR)
+libsvn_fs,_fs_fs,_subr,_delta,_ra_svn,_wc,_ra: apr-1.lib (..\..\..\..\apr\LibR)
+libsvn_subr,_delta: apriconv-1.lib (..\..\..\..\apr-iconv\LibR)
+

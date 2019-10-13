@@ -1,0 +1,32 @@
+﻿  Building Custom Rule D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/CMakeLists.txt
+  CMake does not need to re-run because D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/CMakeFiles/generate.stamp is up-to-date.
+  bpf_dump.c
+  bpf_filter.c
+  bpf_image.c
+  etherent.c
+  fmtutils.c
+  gencode.c
+  nametoaddr.c
+D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\nametoaddr.c(165): warning C4996: 'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\um\winsock2.h(2219): note: see declaration of 'gethostbyname'
+  optimize.c
+  pcap-common.c
+  pcap.c
+D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\pcap.c(3114): warning C4311: 'type cast': pointer truncation from 'HANDLE' to 'DWORD'
+  savefile.c
+  sf-pcapng.c
+  sf-pcap.c
+  win_snprintf.c
+  pcap-null.c
+  grammar.c
+  scanner.c
+D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/scanner.c(3299): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/scanner.c(4487): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/scanner.c(4496): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/scanner.c(4451): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/scanner.c(4465): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/scanner.c(4929): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/scanner.c(4967): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/scanner.c(4989): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  pcapCent.vcxproj -> D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\run\Debug\pcapCent.dll

@@ -1,0 +1,42 @@
+From cfe86fa01adda78985d80372fe00c9bc2c770632 Mon Sep 17 00:00:00 2001
+From: Daniel Miller <dmiller@nmap.com>
+Date: Wed, 19 Nov 2014 12:10:18 -0800
+Subject: [PATCH 03/14] out-to-target: add a TargetName based on the OutputFile
+ name
+
+---
+ .gitignore       |  1 +
+ out-to-target.sh | 13 +++++++++++++
+ 2 files changed, 14 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100755 out-to-target.sh
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..751553b
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++*.bak
+diff --git a/out-to-target.sh b/out-to-target.sh
+new file mode 100755
+index 0000000..0ed6476
+--- /dev/null
++++ b/out-to-target.sh
+@@ -0,0 +1,13 @@
++#!/bin/sh
++
++for f in "$@"; do
++  echo -n "Processing $f... " >&2
++  n=$(perl -ne 'if(/OutputFile>.*?([^\\.]+)\.(?:lib|dll)<\/OutputFile/){print $1;exit}' $f)
++  if [ -n "$n" ]; then
++    echo -n "$n... " >&2
++    sed -b -i.bak "/PropertyGroup.*Release|Win32..>/a<TargetName>$n</TargetName>" $f
++  else
++    echo -n "No change. " >&2
++  fi
++  echo "done" >&2
++done
+-- 
+2.1.1
+

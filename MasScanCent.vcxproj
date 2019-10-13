@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1a43eb2b-dd12-4d9c-bdc6-914b241128bc}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>MasScanCent</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{D51BCBC9-82E9-4017-911E-C93873C4EA2B}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetExt>.a</TargetExt>
+    <TargetName>lib$(ProjectName)SD</TargetName>
+    <RemoteCCompileToolExe>gcc</RemoteCCompileToolExe>
+    <IntDir>$(ProjectDir)Bin$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)Bin$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetExt>.a</TargetExt>
+    <RemoteCCompileToolExe>gcc</RemoteCCompileToolExe>
+    <OutDir>$(ProjectDir)Bin$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)Bin$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>lib$(ProjectName)S</TargetName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="masscan-1.0.5\src\crypto-base64.cc" />
+    <ClCompile Include="masscan-1.0.5\src\crypto-blackrock2.cc" />
+    <ClCompile Include="masscan-1.0.5\src\event-timeout.cc" />
+    <ClCompile Include="masscan-1.0.5\src\in-binary.cc" />
+    <ClCompile Include="masscan-1.0.5\src\in-filter.cc" />
+    <ClCompile Include="masscan-1.0.5\src\in-report.cc" />
+    <ClCompile Include="masscan-1.0.5\src\logger.cc" />
+    <ClCompile Include="masscan-1.0.5\src\main-conf.cc" />
+    <ClCompile Include="masscan-1.0.5\src\main-dedup.cc" />
+    <ClCompile Include="masscan-1.0.5\src\main-initadapter.cc" />
+    <ClCompile Include="masscan-1.0.5\src\main-listscan.cc" />
+    <ClCompile Include="masscan-1.0.5\src\main-ptrace.cc" />
+    <ClCompile Include="masscan-1.0.5\src\main-readrange.cc" />
+    <ClCompile Include="masscan-1.0.5\src\main-src.cc" />
+    <ClCompile Include="masscan-1.0.5\src\main-status.cc" />
+    <ClCompile Include="masscan-1.0.5\src\main-throttle.cc" />
+    <ClCompile Include="masscan-1.0.5\src\main.cc" />
+    <ClCompile Include="masscan-1.0.5\src\masscan-app.cc" />
+    <ClCompile Include="masscan-1.0.5\src\out-binary.cc" />
+    <ClCompile Include="masscan-1.0.5\src\out-certs.cc" />
+    <ClCompile Include="masscan-1.0.5\src\out-grepable.cc" />
+    <ClCompile Include="masscan-1.0.5\src\out-json.cc" />
+    <ClCompile Include="masscan-1.0.5\src\out-ndjson.cc" />
+    <ClCompile Include="masscan-1.0.5\src\out-null.cc" />
+    <ClCompile Include="masscan-1.0.5\src\out-redis.cc" />
+    <ClCompile Include="masscan-1.0.5\src\out-text.cc" />
+    <ClCompile Include="masscan-1.0.5\src\out-unicornscan.cc" />
+    <ClCompile Include="masscan-1.0.5\src\out-xml.cc" />
+    <ClCompile Include="masscan-1.0.5\src\output.cc" />
+    <ClCompile Include="masscan-1.0.5\src\pixie-backtrace.cc" />
+    <ClCompile Include="masscan-1.0.5\src\pixie-file.cc" />
+    <ClCompile Include="masscan-1.0.5\src\pixie-threads.cc" />
+    <ClCompile Include="masscan-1.0.5\src\pixie-timer.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-arp.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-banner1.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-banout.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-dns.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-ftp.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-http.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-icmp.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-imap4.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-interactive.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-memcached.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-netbios.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-ntp.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-pop3.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-preprocess.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-sctp.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-smtp.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-snmp.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-ssh.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-ssl-test.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-ssl.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-tcp-telnet.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-tcp.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-udp.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-vnc.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-x509.cc" />
+    <ClCompile Include="masscan-1.0.5\src\proto-zeroaccess.cc" />
+    <ClCompile Include="masscan-1.0.5\src\rand-blackrock.cc" />
+    <ClCompile Include="masscan-1.0.5\src\rand-lcg.cc" />
+    <ClCompile Include="masscan-1.0.5\src\rand-primegen.cc" />
+    <ClCompile Include="masscan-1.0.5\src\ranges.cc" />
+    <ClCompile Include="masscan-1.0.5\src\rawsock-arp.cc" />
+    <ClCompile Include="masscan-1.0.5\src\rawsock-getif.cc" />
+    <ClCompile Include="masscan-1.0.5\src\rawsock-getip.cc" />
+    <ClCompile Include="masscan-1.0.5\src\rawsock-getmac.cc" />
+    <ClCompile Include="masscan-1.0.5\src\rawsock-getroute.cc" />
+    <ClCompile Include="masscan-1.0.5\src\rawsock-pcap.cc" />
+    <ClCompile Include="masscan-1.0.5\src\rawsock-pcapfile.cc" />
+    <ClCompile Include="masscan-1.0.5\src\rawsock-pfring.cc" />
+    <ClCompile Include="masscan-1.0.5\src\rawsock.cc" />
+    <ClCompile Include="masscan-1.0.5\src\rte-ring.cc" />
+    <ClCompile Include="masscan-1.0.5\src\script-heartbleed.cc" />
+    <ClCompile Include="masscan-1.0.5\src\script-ntp-monlist.cc" />
+    <ClCompile Include="masscan-1.0.5\src\script-sslv3.cc" />
+    <ClCompile Include="masscan-1.0.5\src\script.cc" />
+    <ClCompile Include="masscan-1.0.5\src\siphash24.cc" />
+    <ClCompile Include="masscan-1.0.5\src\smack1.cc" />
+    <ClCompile Include="masscan-1.0.5\src\smackqueue.cc" />
+    <ClCompile Include="masscan-1.0.5\src\string_s.cc" />
+    <ClCompile Include="masscan-1.0.5\src\syn-cookie.cc" />
+    <ClCompile Include="masscan-1.0.5\src\templ-payloads.cc" />
+    <ClCompile Include="masscan-1.0.5\src\templ-pkt.cc" />
+    <ClCompile Include="masscan-1.0.5\src\xring.cc" />
+    <ClCompile Include="SourceCommon\DecodeCommandString.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="masscan-1.0.5\src\crypto-base64.h" />
+    <ClInclude Include="masscan-1.0.5\src\event-timeout.h" />
+    <ClInclude Include="masscan-1.0.5\src\in-binary.h" />
+    <ClInclude Include="masscan-1.0.5\src\in-filter.h" />
+    <ClInclude Include="masscan-1.0.5\src\in-report.h" />
+    <ClInclude Include="masscan-1.0.5\src\logger.h" />
+    <ClInclude Include="masscan-1.0.5\src\main-dedup.h" />
+    <ClInclude Include="masscan-1.0.5\src\main-globals.h" />
+    <ClInclude Include="masscan-1.0.5\src\main-ptrace.h" />
+    <ClInclude Include="masscan-1.0.5\src\main-readrange.h" />
+    <ClInclude Include="masscan-1.0.5\src\main-src.h" />
+    <ClInclude Include="masscan-1.0.5\src\main-status.h" />
+    <ClInclude Include="masscan-1.0.5\src\main-throttle.h" />
+    <ClInclude Include="masscan-1.0.5\src\masscan-app.h" />
+    <ClInclude Include="masscan-1.0.5\src\masscan-status.h" />
+    <ClInclude Include="masscan-1.0.5\src\masscan-version.h" />
+    <ClInclude Include="masscan-1.0.5\src\masscan.h" />
+    <ClInclude Include="masscan-1.0.5\src\out-record.h" />
+    <ClInclude Include="masscan-1.0.5\src\output.h" />
+    <ClInclude Include="masscan-1.0.5\src\packet-queue.h" />
+    <ClInclude Include="masscan-1.0.5\src\pixie-backtrace.h" />
+    <ClInclude Include="masscan-1.0.5\src\pixie-file.h" />
+    <ClInclude Include="masscan-1.0.5\src\pixie-sockets.h" />
+    <ClInclude Include="masscan-1.0.5\src\pixie-threads.h" />
+    <ClInclude Include="masscan-1.0.5\src\pixie-timer.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-arp.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-banner1.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-banout.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-dns-parse.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-dns.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-ftp.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-http.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-icmp.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-imap4.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-interactive.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-memcached.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-netbios.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-ntp.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-pop3.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-preprocess.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-sctp.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-smtp.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-snmp.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-ssh.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-ssl.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-tcp-telnet.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-tcp.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-udp.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-vnc.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-x509.h" />
+    <ClInclude Include="masscan-1.0.5\src\proto-zeroaccess.h" />
+    <ClInclude Include="masscan-1.0.5\src\rand-blackrock.h" />
+    <ClInclude Include="masscan-1.0.5\src\rand-lcg.h" />
+    <ClInclude Include="masscan-1.0.5\src\rand-primegen.h" />
+    <ClInclude Include="masscan-1.0.5\src\ranges.h" />
+    <ClInclude Include="masscan-1.0.5\src\rawsock-adapter.h" />
+    <ClInclude Include="masscan-1.0.5\src\rawsock-pcap.h" />
+    <ClInclude Include="masscan-1.0.5\src\rawsock-pcapfile.h" />
+    <ClInclude Include="masscan-1.0.5\src\rawsock-pfring.h" />
+    <ClInclude Include="masscan-1.0.5\src\rawsock.h" />
+    <ClInclude Include="masscan-1.0.5\src\rte-ring.h" />
+    <ClInclude Include="masscan-1.0.5\src\script.h" />
+    <ClInclude Include="masscan-1.0.5\src\siphash24.h" />
+    <ClInclude Include="masscan-1.0.5\src\smack.h" />
+    <ClInclude Include="masscan-1.0.5\src\smackqueue.h" />
+    <ClInclude Include="masscan-1.0.5\src\string_s.h" />
+    <ClInclude Include="masscan-1.0.5\src\syn-cookie.h" />
+    <ClInclude Include="masscan-1.0.5\src\templ-payloads.h" />
+    <ClInclude Include="masscan-1.0.5\src\templ-pkt.h" />
+    <ClInclude Include="masscan-1.0.5\src\templ-port.h" />
+    <ClInclude Include="masscan-1.0.5\src\unusedparm.h" />
+    <ClInclude Include="masscan-1.0.5\src\xring.h" />
+    <ClInclude Include="SourceCommon\DecodeCommandString.h" />
+    <ClInclude Include="SourceCommon\LibMasScan.h" />
+    <ClInclude Include="SourceCommon\SelenaMessage.h" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <CAdditionalWarning />
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <CppAdditionalWarning />
+      <StrictAliasing />
+      <OmitFramePointers />
+      <ThreadSafeStatics>
+      </ThreadSafeStatics>
+      <RuntimeTypeInfo />
+      <CLanguageStandard>gnu11</CLanguageStandard>
+      <CppLanguageStandard>gnu++11</CppLanguageStandard>
+      <AdditionalIncludeDirectories>.\SourceCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_LIB;STATICPCAP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>Move "$(ProjectDir)Bin$(ProjectName)\$(Platform)\$(Configuration)\*.a" "$(CPROGRAMS)\LibS\"
+</Command>
+    </PostBuildEvent>
+    <RemotePostBuildEvent>
+      <Command>cp -f -p $(RemoteRootDir)/MasScanCent/Bin$(ProjectName)/$(PlatformTargetAsMSBuildArchitecture)/$(Configuration)/*.a $(RemoteRootDir)/AuroraSDK/LibS/</Command>
+    </RemotePostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <CAdditionalWarning />
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <CppAdditionalWarning />
+      <StrictAliasing />
+      <OmitFramePointers />
+      <ThreadSafeStatics />
+      <RuntimeTypeInfo />
+      <CLanguageStandard>gnu11</CLanguageStandard>
+      <CppLanguageStandard>gnu++11</CppLanguageStandard>
+      <AdditionalIncludeDirectories>.\SourceCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_LIB;STATICPCAP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>Move "$(ProjectDir)Bin$(ProjectName)\$(Platform)\$(Configuration)\*.a" "$(CPROGRAMS)\LibS\"
+</Command>
+    </PostBuildEvent>
+    <RemotePostBuildEvent>
+      <Command>cp -f -p $(RemoteRootDir)/MasScanCent/BinMasScanCent/$(PlatformTargetAsMSBuildArchitecture)/$(Configuration)/*.a $(RemoteRootDir)/AuroraSDK/LibS/</Command>
+    </RemotePostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

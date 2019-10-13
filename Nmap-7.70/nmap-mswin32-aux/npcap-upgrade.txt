@@ -1,0 +1,5 @@
+Simply copy the Include and Lib folders from the Npcap SDK into the Npcap
+folder. The x64 library definitions are not included here, since we currently
+only build Nmap for 32-bit Windows.
+
+Current version: Npcap SDK 1.01

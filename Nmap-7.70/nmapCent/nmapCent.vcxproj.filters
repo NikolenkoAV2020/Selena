@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Lua Headers">
+      <UniqueIdentifier>{1d702e79-d4f5-40d5-8b32-51d25fe1200b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libssh2 Header">
+      <UniqueIdentifier>{87ca3599-f466-4acf-a453-6c42a236d7b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libdnet-stripped Headers">
+      <UniqueIdentifier>{5f3c5ca3-30c8-4c8c-aacd-79ccfa0ded34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Source">
+      <UniqueIdentifier>{d0f3e78d-43e1-44c1-9dc0-f5d4ca064086}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\liblua\lapi.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lauxlib.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lcode.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lctype.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\ldebug.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\ldo.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lfunc.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lgc.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\llex.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\llimits.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lmem.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lobject.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lopcodes.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lparser.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lprefix.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lstate.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lstring.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\ltable.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\ltm.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lua.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lua.hpp">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\luaconf.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lualib.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lundump.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lvm.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\liblua\lzio.h">
+      <Filter>Lua Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\include\libssh2.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\include\libssh2_publickey.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\include\libssh2_sftp.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\src\channel.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\src\comp.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\src\crypto.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\src\libgcrypt.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\src\libssh2_priv.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\src\mac.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\src\mbedtls.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\src\misc.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\src\openssl.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\src\os400qc3.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\src\packet.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\src\session.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\src\sftp.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\src\transport.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\src\userauth.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libssh2\src\wincng.h">
+      <Filter>Libssh2 Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\config.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\err.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\queue.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet\addr.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet\arp.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet\blob.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet\eth.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet\fw.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet\icmp.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet\icmpv6.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet\intf.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet\ip.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet\ip6.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet\os.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet\rand.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet\route.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet\sctp.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet\tcp.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet\tun.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libdnet-stripped\include\dnet\udp.h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SourceCommon\DecodeCommandString.h">
+      <Filter>Common Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\charpool.h" />
+    <ClInclude Include="..\FingerPrintResults.h" />
+    <ClInclude Include="..\FPEngine.h" />
+    <ClInclude Include="..\FPModel.h" />
+    <ClInclude Include="..\idle_scan.h" />
+    <ClInclude Include="..\MACLookup.h" />
+    <ClInclude Include="..\NewTargets.h" />
+    <ClInclude Include="..\nmap.h" />
+    <ClInclude Include="..\NmapOps.h" />
+    <ClInclude Include="..\NmapOutputTable.h" />
+    <ClInclude Include="..\nmap_config.h" />
+    <ClInclude Include="..\nmap_dns.h" />
+    <ClInclude Include="..\nmap_error.h" />
+    <ClInclude Include="..\nmap_ftp.h" />
+    <ClInclude Include="..\nmap_tty.h" />
+    <ClInclude Include="..\nse_debug.h" />
+    <ClInclude Include="..\nse_dnet.h" />
+    <ClInclude Include="..\nse_fs.h" />
+    <ClInclude Include="..\nse_libssh2.h" />
+    <ClInclude Include="..\nse_lpeg.h" />
+    <ClInclude Include="..\nse_lua.h" />
+    <ClInclude Include="..\nse_main.h" />
+    <ClInclude Include="..\nse_nmaplib.h" />
+    <ClInclude Include="..\nse_nsock.h" />
+    <ClInclude Include="..\nse_openssl.h" />
+    <ClInclude Include="..\nse_pcrelib.h" />
+    <ClInclude Include="..\nse_ssl_cert.h" />
+    <ClInclude Include="..\nse_utility.h" />
+    <ClInclude Include="..\nse_zlib.h" />
+    <ClInclude Include="..\osscan.h" />
+    <ClInclude Include="..\osscan2.h" />
+    <ClInclude Include="..\output.h" />
+    <ClInclude Include="..\payload.h" />
+    <ClInclude Include="..\portlist.h" />
+    <ClInclude Include="..\portreasons.h" />
+    <ClInclude Include="..\probespec.h" />
+    <ClInclude Include="..\protocols.h" />
+    <ClInclude Include="..\scan_engine.h" />
+    <ClInclude Include="..\scan_engine_connect.h" />
+    <ClInclude Include="..\scan_engine_raw.h" />
+    <ClInclude Include="..\scan_lists.h" />
+    <ClInclude Include="..\services.h" />
+    <ClInclude Include="..\service_scan.h" />
+    <ClInclude Include="..\struct_ip.h" />
+    <ClInclude Include="..\Target.h" />
+    <ClInclude Include="..\TargetGroup.h" />
+    <ClInclude Include="..\targets.h" />
+    <ClInclude Include="..\tcpip.h" />
+    <ClInclude Include="..\timing.h" />
+    <ClInclude Include="..\traceroute.h" />
+    <ClInclude Include="..\utils.h" />
+    <ClInclude Include="..\xml.h" />
+    <ClInclude Include="..\..\SourceCommon\LibNmapScan.h">
+      <Filter>Common Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SourceCommon\SelenaSafeObject.h">
+      <Filter>Common Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SourceCommon\SelenaThreads.h">
+      <Filter>Common Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\libdnet-stripped\include\stamp-h">
+      <Filter>libdnet-stripped Headers</Filter>
+    </None>
+    <None Include="..\nmap-mac-prefixes" />
+    <None Include="..\nse_main.lua" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\lpeg.c" />
+    <ClCompile Include="..\charpool.cc" />
+    <ClCompile Include="..\FingerPrintResults.cc" />
+    <ClCompile Include="..\FPEngine.cc" />
+    <ClCompile Include="..\FPModel.cc" />
+    <ClCompile Include="..\idle_scan.cc" />
+    <ClCompile Include="..\MACLookup.cc" />
+    <ClCompile Include="..\main.cc" />
+    <ClCompile Include="..\NewTargets.cc" />
+    <ClCompile Include="..\nmap.cc" />
+    <ClCompile Include="..\NmapOps.cc" />
+    <ClCompile Include="..\NmapOutputTable.cc" />
+    <ClCompile Include="..\nmap_dns.cc" />
+    <ClCompile Include="..\nmap_error.cc" />
+    <ClCompile Include="..\nmap_ftp.cc" />
+    <ClCompile Include="..\nmap_tty.cc" />
+    <ClCompile Include="..\nse_debug.cc" />
+    <ClCompile Include="..\nse_dnet.cc" />
+    <ClCompile Include="..\nse_fs.cc" />
+    <ClCompile Include="..\nse_libssh2.cc" />
+    <ClCompile Include="..\nse_lpeg.cc" />
+    <ClCompile Include="..\nse_main.cc" />
+    <ClCompile Include="..\nse_nmaplib.cc" />
+    <ClCompile Include="..\nse_nsock.cc" />
+    <ClCompile Include="..\nse_openssl.cc" />
+    <ClCompile Include="..\nse_pcrelib.cc" />
+    <ClCompile Include="..\nse_ssl_cert.cc" />
+    <ClCompile Include="..\nse_utility.cc" />
+    <ClCompile Include="..\nse_zlib.cc" />
+    <ClCompile Include="..\osscan.cc" />
+    <ClCompile Include="..\osscan2.cc" />
+    <ClCompile Include="..\output.cc" />
+    <ClCompile Include="..\payload.cc" />
+    <ClCompile Include="..\portlist.cc" />
+    <ClCompile Include="..\portreasons.cc" />
+    <ClCompile Include="..\protocols.cc" />
+    <ClCompile Include="..\scan_engine.cc" />
+    <ClCompile Include="..\scan_engine_connect.cc" />
+    <ClCompile Include="..\scan_engine_raw.cc" />
+    <ClCompile Include="..\scan_lists.cc" />
+    <ClCompile Include="..\services.cc" />
+    <ClCompile Include="..\service_scan.cc" />
+    <ClCompile Include="..\Target.cc" />
+    <ClCompile Include="..\TargetGroup.cc" />
+    <ClCompile Include="..\targets.cc" />
+    <ClCompile Include="..\tcpip.cc" />
+    <ClCompile Include="..\timing.cc" />
+    <ClCompile Include="..\traceroute.cc" />
+    <ClCompile Include="..\utils.cc" />
+    <ClCompile Include="..\xml.cc" />
+    <ClCompile Include="..\..\SourceCommon\DecodeCommandString.cc">
+      <Filter>Common Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

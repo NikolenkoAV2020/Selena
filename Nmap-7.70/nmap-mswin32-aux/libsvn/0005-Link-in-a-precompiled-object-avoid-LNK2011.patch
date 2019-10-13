@@ -1,0 +1,25 @@
+From f241c35f914e6a3976dec638d939dae617331102 Mon Sep 17 00:00:00 2001
+From: Daniel Miller <dmiller@nmap.com>
+Date: Wed, 19 Nov 2014 12:35:46 -0800
+Subject: [PATCH 05/14] Link in a precompiled object, avoid LNK2011
+
+---
+ apr-iconv/build/modules.mk.win | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/apr-iconv/build/modules.mk.win b/apr-iconv/build/modules.mk.win
+index 8e5d778..a396812 100644
+--- a/apr-iconv/build/modules.mk.win
++++ b/apr-iconv/build/modules.mk.win
+@@ -218,7 +218,7 @@ $(MODRES).pch:
+ 
+ .c{$(OUTPUT_DIR)}.so:
+ 	$(SILENT)cl $(ALL_CFLAGS) /Fo$*.obj /Yuiconv.h /c $<
+-	$(SILENT)link $(ALL_LDFLAGS) $*.obj $(API_LIBS) /out:$@ \
++	$(SILENT)link $(ALL_LDFLAGS) $(MODRES).obj $*.obj $(API_LIBS) /out:$@ \
+ 		/base:@"..\build\BaseAddr.ref",$(@F)
+ 	$(SILENT)if exist $@.manifest \
+ 		$(SILENT)mt -nologo -manifest $@.manifest -outputresource:$@;2 \
+-- 
+2.1.1
+

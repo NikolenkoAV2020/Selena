@@ -1,0 +1,451 @@
+From 6533ea260172a93ddcb340961be5b43870f8c33f Mon Sep 17 00:00:00 2001
+From: Daniel Miller <dmiller@nmap.com>
+Date: Sat, 22 Nov 2014 07:02:39 -0800
+Subject: [PATCH 14/14] Make svn build use static apr
+
+---
+ src-trunk/build/win32/vcnet-vcproj/libsvn_client.vcxproj   | 6 ++----
+ src-trunk/build/win32/vcnet-vcproj/libsvn_delta.vcxproj    | 6 ++----
+ src-trunk/build/win32/vcnet-vcproj/libsvn_diff.vcxproj     | 6 ++----
+ src-trunk/build/win32/vcnet-vcproj/libsvn_fs.vcxproj       | 6 ++----
+ src-trunk/build/win32/vcnet-vcproj/libsvn_fs_fs.vcxproj    | 6 ++----
+ src-trunk/build/win32/vcnet-vcproj/libsvn_fs_util.vcxproj  | 6 ++----
+ src-trunk/build/win32/vcnet-vcproj/libsvn_ra.vcxproj       | 6 ++----
+ src-trunk/build/win32/vcnet-vcproj/libsvn_ra_local.vcxproj | 6 ++----
+ src-trunk/build/win32/vcnet-vcproj/libsvn_ra_serf.vcxproj  | 6 ++----
+ src-trunk/build/win32/vcnet-vcproj/libsvn_ra_svn.vcxproj   | 6 ++----
+ src-trunk/build/win32/vcnet-vcproj/libsvn_repos.vcxproj    | 6 ++----
+ src-trunk/build/win32/vcnet-vcproj/libsvn_subr.vcxproj     | 6 ++----
+ src-trunk/build/win32/vcnet-vcproj/libsvn_test.vcxproj     | 6 ++----
+ src-trunk/build/win32/vcnet-vcproj/libsvn_wc.vcxproj       | 6 ++----
+ src-trunk/build/win32/vcnet-vcproj/libsvncxxhl.vcxproj     | 6 ++----
+ src-trunk/build/win32/vcnet-vcproj/svn_locale.vcxproj      | 4 ++--
+ 16 files changed, 32 insertions(+), 62 deletions(-)
+
+diff --git a/src-trunk/build/win32/vcnet-vcproj/libsvn_client.vcxproj b/src-trunk/build/win32/vcnet-vcproj/libsvn_client.vcxproj
+index ee55c4e..99f7e32 100755
+--- a/src-trunk/build/win32/vcnet-vcproj/libsvn_client.vcxproj
++++ b/src-trunk/build/win32/vcnet-vcproj/libsvn_client.vcxproj
+@@ -1,5 +1,4 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-
+ <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|Win32">
+@@ -117,7 +116,7 @@
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+       <StringPooling>true</StringPooling>
+       <AdditionalIncludeDirectories>$(SolutionDir)Release;..\..\..\subversion\include;..\..\..\subversion;..\..\..\..\apr\include;..\..\..\..\apr-util\include;..\..\..\..\apr-util\xml\expat\lib;..\..\..\subversion\bindings\swig\proxy;..\..\..\db4-win32\include;..\..\..\serf;..\..\..\..\..\OpenSSL\include;..\..\..\zlib;..\..\..\sqlite-amalgamation;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <PreprocessorDefinitions>WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <PreprocessorDefinitions>APR_DECLARE_STATIC;APU_DECLARE_STATIC;API_DECLARE_STATIC;WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <WarningLevel>Level4</WarningLevel>
+       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+       <BrowseInformation>true</BrowseInformation>
+@@ -265,5 +264,4 @@
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
+-</Project>
+-
++</Project>
+\ No newline at end of file
+diff --git a/src-trunk/build/win32/vcnet-vcproj/libsvn_delta.vcxproj b/src-trunk/build/win32/vcnet-vcproj/libsvn_delta.vcxproj
+index 8056a42..761b69d 100755
+--- a/src-trunk/build/win32/vcnet-vcproj/libsvn_delta.vcxproj
++++ b/src-trunk/build/win32/vcnet-vcproj/libsvn_delta.vcxproj
+@@ -1,5 +1,4 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-
+ <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|Win32">
+@@ -117,7 +116,7 @@
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+       <StringPooling>true</StringPooling>
+       <AdditionalIncludeDirectories>$(SolutionDir)Release;..\..\..\subversion\include;..\..\..\subversion;..\..\..\..\apr\include;..\..\..\..\apr-util\include;..\..\..\..\apr-util\xml\expat\lib;..\..\..\subversion\bindings\swig\proxy;..\..\..\db4-win32\include;..\..\..\serf;..\..\..\..\..\OpenSSL\include;..\..\..\zlib;..\..\..\sqlite-amalgamation;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <PreprocessorDefinitions>WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <PreprocessorDefinitions>APR_DECLARE_STATIC;APU_DECLARE_STATIC;API_DECLARE_STATIC;WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <WarningLevel>Level4</WarningLevel>
+       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+       <BrowseInformation>true</BrowseInformation>
+@@ -208,5 +207,4 @@
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
+-</Project>
+-
++</Project>
+\ No newline at end of file
+diff --git a/src-trunk/build/win32/vcnet-vcproj/libsvn_diff.vcxproj b/src-trunk/build/win32/vcnet-vcproj/libsvn_diff.vcxproj
+index fc500f7..d3ad440 100755
+--- a/src-trunk/build/win32/vcnet-vcproj/libsvn_diff.vcxproj
++++ b/src-trunk/build/win32/vcnet-vcproj/libsvn_diff.vcxproj
+@@ -1,5 +1,4 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-
+ <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|Win32">
+@@ -117,7 +116,7 @@
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+       <StringPooling>true</StringPooling>
+       <AdditionalIncludeDirectories>$(SolutionDir)Release;..\..\..\subversion\include;..\..\..\subversion;..\..\..\..\apr\include;..\..\..\..\apr-util\include;..\..\..\..\apr-util\xml\expat\lib;..\..\..\subversion\bindings\swig\proxy;..\..\..\db4-win32\include;..\..\..\serf;..\..\..\..\..\OpenSSL\include;..\..\..\zlib;..\..\..\sqlite-amalgamation;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <PreprocessorDefinitions>WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <PreprocessorDefinitions>APR_DECLARE_STATIC;APU_DECLARE_STATIC;API_DECLARE_STATIC;WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <WarningLevel>Level4</WarningLevel>
+       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+       <BrowseInformation>true</BrowseInformation>
+@@ -210,5 +209,4 @@
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
+-</Project>
+-
++</Project>
+\ No newline at end of file
+diff --git a/src-trunk/build/win32/vcnet-vcproj/libsvn_fs.vcxproj b/src-trunk/build/win32/vcnet-vcproj/libsvn_fs.vcxproj
+index 209e0ef..ee999c0 100755
+--- a/src-trunk/build/win32/vcnet-vcproj/libsvn_fs.vcxproj
++++ b/src-trunk/build/win32/vcnet-vcproj/libsvn_fs.vcxproj
+@@ -1,5 +1,4 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-
+ <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|Win32">
+@@ -117,7 +116,7 @@
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+       <StringPooling>true</StringPooling>
+       <AdditionalIncludeDirectories>$(SolutionDir)Release;..\..\..\subversion\include;..\..\..\subversion;..\..\..\..\apr\include;..\..\..\..\apr-util\include;..\..\..\..\apr-util\xml\expat\lib;..\..\..\subversion\bindings\swig\proxy;..\..\..\db4-win32\include;..\..\..\serf;..\..\..\..\..\OpenSSL\include;..\..\..\zlib;..\..\..\sqlite-amalgamation;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <PreprocessorDefinitions>WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <PreprocessorDefinitions>APR_DECLARE_STATIC;APU_DECLARE_STATIC;API_DECLARE_STATIC;WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <WarningLevel>Level4</WarningLevel>
+       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+       <BrowseInformation>true</BrowseInformation>
+@@ -204,5 +203,4 @@
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
+-</Project>
+-
++</Project>
+\ No newline at end of file
+diff --git a/src-trunk/build/win32/vcnet-vcproj/libsvn_fs_fs.vcxproj b/src-trunk/build/win32/vcnet-vcproj/libsvn_fs_fs.vcxproj
+index 9cde1f0..8fea640 100755
+--- a/src-trunk/build/win32/vcnet-vcproj/libsvn_fs_fs.vcxproj
++++ b/src-trunk/build/win32/vcnet-vcproj/libsvn_fs_fs.vcxproj
+@@ -1,5 +1,4 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-
+ <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|Win32">
+@@ -117,7 +116,7 @@
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+       <StringPooling>true</StringPooling>
+       <AdditionalIncludeDirectories>$(SolutionDir)Release;..\..\..\subversion\include;..\..\..\subversion;..\..\..\..\apr\include;..\..\..\..\apr-util\include;..\..\..\..\apr-util\xml\expat\lib;..\..\..\subversion\bindings\swig\proxy;..\..\..\db4-win32\include;..\..\..\serf;..\..\..\..\..\OpenSSL\include;..\..\..\zlib;..\..\..\sqlite-amalgamation;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <PreprocessorDefinitions>WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <PreprocessorDefinitions>APR_DECLARE_STATIC;APU_DECLARE_STATIC;API_DECLARE_STATIC;WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <WarningLevel>Level4</WarningLevel>
+       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+       <BrowseInformation>true</BrowseInformation>
+@@ -222,5 +221,4 @@
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
+-</Project>
+-
++</Project>
+\ No newline at end of file
+diff --git a/src-trunk/build/win32/vcnet-vcproj/libsvn_fs_util.vcxproj b/src-trunk/build/win32/vcnet-vcproj/libsvn_fs_util.vcxproj
+index e3b2187..2113d2a 100755
+--- a/src-trunk/build/win32/vcnet-vcproj/libsvn_fs_util.vcxproj
++++ b/src-trunk/build/win32/vcnet-vcproj/libsvn_fs_util.vcxproj
+@@ -1,5 +1,4 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-
+ <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|Win32">
+@@ -117,7 +116,7 @@
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+       <StringPooling>true</StringPooling>
+       <AdditionalIncludeDirectories>$(SolutionDir)Release;..\..\..\subversion\include;..\..\..\subversion;..\..\..\..\apr\include;..\..\..\..\apr-util\include;..\..\..\..\apr-util\xml\expat\lib;..\..\..\subversion\bindings\swig\proxy;..\..\..\db4-win32\include;..\..\..\serf;..\..\..\..\..\OpenSSL\include;..\..\..\zlib;..\..\..\sqlite-amalgamation;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <PreprocessorDefinitions>WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <PreprocessorDefinitions>APR_DECLARE_STATIC;APU_DECLARE_STATIC;API_DECLARE_STATIC;WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <WarningLevel>Level4</WarningLevel>
+       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+       <BrowseInformation>true</BrowseInformation>
+@@ -179,5 +178,4 @@
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
+-</Project>
+-
++</Project>
+\ No newline at end of file
+diff --git a/src-trunk/build/win32/vcnet-vcproj/libsvn_ra.vcxproj b/src-trunk/build/win32/vcnet-vcproj/libsvn_ra.vcxproj
+index 6bd090e..919755a 100755
+--- a/src-trunk/build/win32/vcnet-vcproj/libsvn_ra.vcxproj
++++ b/src-trunk/build/win32/vcnet-vcproj/libsvn_ra.vcxproj
+@@ -1,5 +1,4 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-
+ <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|Win32">
+@@ -117,7 +116,7 @@
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+       <StringPooling>true</StringPooling>
+       <AdditionalIncludeDirectories>$(SolutionDir)Release;..\..\..\subversion\include;..\..\..\subversion;..\..\..\..\apr\include;..\..\..\..\apr-util\include;..\..\..\..\apr-util\xml\expat\lib;..\..\..\subversion\bindings\swig\proxy;..\..\..\db4-win32\include;..\..\..\serf;..\..\..\..\..\OpenSSL\include;..\..\..\zlib;..\..\..\sqlite-amalgamation;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <PreprocessorDefinitions>WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <PreprocessorDefinitions>APR_DECLARE_STATIC;APU_DECLARE_STATIC;API_DECLARE_STATIC;WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <WarningLevel>Level4</WarningLevel>
+       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+       <BrowseInformation>true</BrowseInformation>
+@@ -209,5 +208,4 @@
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
+-</Project>
+-
++</Project>
+\ No newline at end of file
+diff --git a/src-trunk/build/win32/vcnet-vcproj/libsvn_ra_local.vcxproj b/src-trunk/build/win32/vcnet-vcproj/libsvn_ra_local.vcxproj
+index b1735b9..cf27065 100755
+--- a/src-trunk/build/win32/vcnet-vcproj/libsvn_ra_local.vcxproj
++++ b/src-trunk/build/win32/vcnet-vcproj/libsvn_ra_local.vcxproj
+@@ -1,5 +1,4 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-
+ <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|Win32">
+@@ -117,7 +116,7 @@
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+       <StringPooling>true</StringPooling>
+       <AdditionalIncludeDirectories>$(SolutionDir)Release;..\..\..\subversion\include;..\..\..\subversion;..\..\..\..\apr\include;..\..\..\..\apr-util\include;..\..\..\..\apr-util\xml\expat\lib;..\..\..\subversion\bindings\swig\proxy;..\..\..\db4-win32\include;..\..\..\serf;..\..\..\..\..\OpenSSL\include;..\..\..\zlib;..\..\..\sqlite-amalgamation;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <PreprocessorDefinitions>WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <PreprocessorDefinitions>APR_DECLARE_STATIC;APU_DECLARE_STATIC;API_DECLARE_STATIC;WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <WarningLevel>Level4</WarningLevel>
+       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+       <BrowseInformation>true</BrowseInformation>
+@@ -198,5 +197,4 @@
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
+-</Project>
+-
++</Project>
+\ No newline at end of file
+diff --git a/src-trunk/build/win32/vcnet-vcproj/libsvn_ra_serf.vcxproj b/src-trunk/build/win32/vcnet-vcproj/libsvn_ra_serf.vcxproj
+index b0bc414..473128a 100755
+--- a/src-trunk/build/win32/vcnet-vcproj/libsvn_ra_serf.vcxproj
++++ b/src-trunk/build/win32/vcnet-vcproj/libsvn_ra_serf.vcxproj
+@@ -1,5 +1,4 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-
+ <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|Win32">
+@@ -117,7 +116,7 @@
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+       <StringPooling>true</StringPooling>
+       <AdditionalIncludeDirectories>$(SolutionDir)Release;..\..\..\subversion\include;..\..\..\subversion;..\..\..\..\apr\include;..\..\..\..\apr-util\include;..\..\..\..\apr-util\xml\expat\lib;..\..\..\subversion\bindings\swig\proxy;..\..\..\db4-win32\include;..\..\..\serf;..\..\..\..\..\OpenSSL\include;..\..\..\zlib;..\..\..\sqlite-amalgamation;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <PreprocessorDefinitions>WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <PreprocessorDefinitions>APR_DECLARE_STATIC;APU_DECLARE_STATIC;API_DECLARE_STATIC;WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <WarningLevel>Level4</WarningLevel>
+       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+       <BrowseInformation>true</BrowseInformation>
+@@ -223,5 +222,4 @@
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
+-</Project>
+-
++</Project>
+\ No newline at end of file
+diff --git a/src-trunk/build/win32/vcnet-vcproj/libsvn_ra_svn.vcxproj b/src-trunk/build/win32/vcnet-vcproj/libsvn_ra_svn.vcxproj
+index 2be2506..eb90a13 100755
+--- a/src-trunk/build/win32/vcnet-vcproj/libsvn_ra_svn.vcxproj
++++ b/src-trunk/build/win32/vcnet-vcproj/libsvn_ra_svn.vcxproj
+@@ -1,5 +1,4 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-
+ <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|Win32">
+@@ -117,7 +116,7 @@
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+       <StringPooling>true</StringPooling>
+       <AdditionalIncludeDirectories>$(SolutionDir)Release;..\..\..\subversion\include;..\..\..\subversion;..\..\..\..\apr\include;..\..\..\..\apr-util\include;..\..\..\..\apr-util\xml\expat\lib;..\..\..\subversion\bindings\swig\proxy;..\..\..\db4-win32\include;..\..\..\serf;..\..\..\..\..\OpenSSL\include;..\..\..\zlib;..\..\..\sqlite-amalgamation;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <PreprocessorDefinitions>WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <PreprocessorDefinitions>APR_DECLARE_STATIC;APU_DECLARE_STATIC;API_DECLARE_STATIC;WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <WarningLevel>Level4</WarningLevel>
+       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+       <BrowseInformation>true</BrowseInformation>
+@@ -208,5 +207,4 @@
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
+-</Project>
+-
++</Project>
+\ No newline at end of file
+diff --git a/src-trunk/build/win32/vcnet-vcproj/libsvn_repos.vcxproj b/src-trunk/build/win32/vcnet-vcproj/libsvn_repos.vcxproj
+index 6833d43..842b57a 100755
+--- a/src-trunk/build/win32/vcnet-vcproj/libsvn_repos.vcxproj
++++ b/src-trunk/build/win32/vcnet-vcproj/libsvn_repos.vcxproj
+@@ -1,5 +1,4 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-
+ <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|Win32">
+@@ -117,7 +116,7 @@
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+       <StringPooling>true</StringPooling>
+       <AdditionalIncludeDirectories>$(SolutionDir)Release;..\..\..\subversion\include;..\..\..\subversion;..\..\..\..\apr\include;..\..\..\..\apr-util\include;..\..\..\..\apr-util\xml\expat\lib;..\..\..\subversion\bindings\swig\proxy;..\..\..\db4-win32\include;..\..\..\serf;..\..\..\..\..\OpenSSL\include;..\..\..\zlib;..\..\..\sqlite-amalgamation;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <PreprocessorDefinitions>WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <PreprocessorDefinitions>APR_DECLARE_STATIC;APU_DECLARE_STATIC;API_DECLARE_STATIC;WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <WarningLevel>Level4</WarningLevel>
+       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+       <BrowseInformation>true</BrowseInformation>
+@@ -228,5 +227,4 @@
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
+-</Project>
+-
++</Project>
+\ No newline at end of file
+diff --git a/src-trunk/build/win32/vcnet-vcproj/libsvn_subr.vcxproj b/src-trunk/build/win32/vcnet-vcproj/libsvn_subr.vcxproj
+index 52f1575..8f04742 100755
+--- a/src-trunk/build/win32/vcnet-vcproj/libsvn_subr.vcxproj
++++ b/src-trunk/build/win32/vcnet-vcproj/libsvn_subr.vcxproj
+@@ -1,5 +1,4 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-
+ <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|Win32">
+@@ -117,7 +116,7 @@
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+       <StringPooling>true</StringPooling>
+       <AdditionalIncludeDirectories>$(SolutionDir)Release;..\..\..\subversion\include;..\..\..\subversion;..\..\..\..\apr\include;..\..\..\..\apr-util\include;..\..\..\..\apr-util\xml\expat\lib;..\..\..\subversion\bindings\swig\proxy;..\..\..\db4-win32\include;..\..\..\serf;..\..\..\..\..\OpenSSL\include;..\..\..\zlib;..\..\..\sqlite-amalgamation;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <PreprocessorDefinitions>WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;SVN_USE_WIN32_CRASHHANDLER;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <PreprocessorDefinitions>APR_DECLARE_STATIC;APU_DECLARE_STATIC;API_DECLARE_STATIC;WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;SVN_USE_WIN32_CRASHHANDLER;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <WarningLevel>Level4</WarningLevel>
+       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+       <BrowseInformation>true</BrowseInformation>
+@@ -320,5 +319,4 @@
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
+-</Project>
+-
++</Project>
+\ No newline at end of file
+diff --git a/src-trunk/build/win32/vcnet-vcproj/libsvn_test.vcxproj b/src-trunk/build/win32/vcnet-vcproj/libsvn_test.vcxproj
+index 2cd88a9..b83df2d 100755
+--- a/src-trunk/build/win32/vcnet-vcproj/libsvn_test.vcxproj
++++ b/src-trunk/build/win32/vcnet-vcproj/libsvn_test.vcxproj
+@@ -1,5 +1,4 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-
+ <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|Win32">
+@@ -117,7 +116,7 @@
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+       <StringPooling>true</StringPooling>
+       <AdditionalIncludeDirectories>$(SolutionDir)Release;..\..\..\subversion\include;..\..\..\subversion;..\..\..\..\apr\include;..\..\..\..\apr-util\include;..\..\..\..\apr-util\xml\expat\lib;..\..\..\subversion\bindings\swig\proxy;..\..\..\db4-win32\include;..\..\..\serf;..\..\..\..\..\OpenSSL\include;..\..\..\zlib;..\..\..\sqlite-amalgamation;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <PreprocessorDefinitions>WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <PreprocessorDefinitions>APR_DECLARE_STATIC;APU_DECLARE_STATIC;API_DECLARE_STATIC;WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <WarningLevel>Level4</WarningLevel>
+       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+       <BrowseInformation>true</BrowseInformation>
+@@ -188,5 +187,4 @@
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
+-</Project>
+-
++</Project>
+\ No newline at end of file
+diff --git a/src-trunk/build/win32/vcnet-vcproj/libsvn_wc.vcxproj b/src-trunk/build/win32/vcnet-vcproj/libsvn_wc.vcxproj
+index 2114333..bdf7970 100755
+--- a/src-trunk/build/win32/vcnet-vcproj/libsvn_wc.vcxproj
++++ b/src-trunk/build/win32/vcnet-vcproj/libsvn_wc.vcxproj
+@@ -1,5 +1,4 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-
+ <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|Win32">
+@@ -117,7 +116,7 @@
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+       <StringPooling>true</StringPooling>
+       <AdditionalIncludeDirectories>$(SolutionDir)Release;..\..\..\subversion\include;..\..\..\subversion;..\..\..\..\apr\include;..\..\..\..\apr-util\include;..\..\..\..\apr-util\xml\expat\lib;..\..\..\subversion\bindings\swig\proxy;..\..\..\db4-win32\include;..\..\..\serf;..\..\..\..\..\OpenSSL\include;..\..\..\zlib;..\..\..\sqlite-amalgamation;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <PreprocessorDefinitions>WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <PreprocessorDefinitions>APR_DECLARE_STATIC;APU_DECLARE_STATIC;API_DECLARE_STATIC;WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <WarningLevel>Level4</WarningLevel>
+       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+       <BrowseInformation>true</BrowseInformation>
+@@ -265,5 +264,4 @@
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
+-</Project>
+-
++</Project>
+\ No newline at end of file
+diff --git a/src-trunk/build/win32/vcnet-vcproj/libsvncxxhl.vcxproj b/src-trunk/build/win32/vcnet-vcproj/libsvncxxhl.vcxproj
+index ca64deb..eb12d4f 100755
+--- a/src-trunk/build/win32/vcnet-vcproj/libsvncxxhl.vcxproj
++++ b/src-trunk/build/win32/vcnet-vcproj/libsvncxxhl.vcxproj
+@@ -1,5 +1,4 @@
+ ﻿<?xml version="1.0" encoding="utf-8"?>
+-
+ <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|Win32">
+@@ -117,7 +116,7 @@
+       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+       <StringPooling>true</StringPooling>
+       <AdditionalIncludeDirectories>$(SolutionDir)Release;..\..\..\subversion\include;..\..\..\subversion;..\..\..\..\apr\include;..\..\..\..\apr-util\include;..\..\..\..\apr-util\xml\expat\lib;..\..\..\subversion\bindings\swig\proxy;..\..\..\db4-win32\include;..\..\..\serf;..\..\..\..\..\OpenSSL\include;..\..\..\zlib;..\..\..\sqlite-amalgamation;..\..\..\subversion\bindings\cxxhl\include;;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+-      <PreprocessorDefinitions>WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
++      <PreprocessorDefinitions>APR_DECLARE_STATIC;APU_DECLARE_STATIC;API_DECLARE_STATIC;WIN32;_WINDOWS;alloca=_alloca;_CRT_SECURE_NO_DEPRECATE=;_CRT_NONSTDC_NO_DEPRECATE=;_CRT_SECURE_NO_WARNINGS=;SVN_SQLITE_INLINE;snprintf=_snprintf;NDEBUG;SVN_HAVE_SERF;SVN_LIBSVN_CLIENT_LINKS_RA_SERF;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <WarningLevel>Level4</WarningLevel>
+       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+       <BrowseInformation>true</BrowseInformation>
+@@ -188,5 +187,4 @@
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
+-</Project>
+-
++</Project>
+\ No newline at end of file
+diff --git a/src-trunk/build/win32/vcnet-vcproj/svn_locale.vcxproj b/src-trunk/build/win32/vcnet-vcproj/svn_locale.vcxproj
+index 7395c56..7c56a1b 100755
+--- a/src-trunk/build/win32/vcnet-vcproj/svn_locale.vcxproj
++++ b/src-trunk/build/win32/vcnet-vcproj/svn_locale.vcxproj
+@@ -1,4 +1,4 @@
+-<?xml version="1.0" encoding="utf-8"?>
++﻿<?xml version="1.0" encoding="utf-8"?>
+ <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemGroup Label="ProjectConfigurations">
+     <ProjectConfiguration Include="Debug|Win32">
+@@ -20,7 +20,7 @@
+   </ItemGroup>
+   <PropertyGroup Label="Globals">
+     <ProjectName>locale</ProjectName>
+-    <ProjectGuid>{BE229ADD-59F8-EABD-58CD-E955FB196512}</ProjectGuid>
++    <ProjectGuid>{FB216D9E-8791-E63C-8D12-BDC420956839}</ProjectGuid>
+     <Keyword>MakeFileProj</Keyword>
+   </PropertyGroup>
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+-- 
+2.1.1
+

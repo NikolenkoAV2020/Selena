@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3C9127E9-4EAA-3F47-95D0-BF46361FE16B}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>SerializeTarget</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\e7d5df095606288c09f7d20113ba361d\grammar.c.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating grammar.c, grammar.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\MinGW\msys\1.0\bin\bison.exe -y -p pcap_ -o D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/grammar.c -d D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/grammar.y
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\grammar.y;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\grammar.c;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\grammar.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating grammar.c, grammar.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\MinGW\msys\1.0\bin\bison.exe -y -p pcap_ -o D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/grammar.c -d D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/grammar.y
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\grammar.y;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\grammar.c;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\grammar.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating grammar.c, grammar.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\MinGW\msys\1.0\bin\bison.exe -y -p pcap_ -o D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/grammar.c -d D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/grammar.y
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\grammar.y;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\grammar.c;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\grammar.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating grammar.c, grammar.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\MinGW\msys\1.0\bin\bison.exe -y -p pcap_ -o D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/grammar.c -d D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/grammar.y
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\grammar.y;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\grammar.c;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\grammar.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\e7d5df095606288c09f7d20113ba361d\scanner.c.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating scanner.c, scanner.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\MinGW\msys\1.0\bin\flex.exe -P pcap_ --header-file=scanner.h --nounput -oD:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/scanner.c D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/scanner.l
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\scanner.l;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\scanner.c;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\scanner.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating scanner.c, scanner.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\MinGW\msys\1.0\bin\flex.exe -P pcap_ --header-file=scanner.h --nounput -oD:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/scanner.c D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/scanner.l
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\scanner.l;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\scanner.c;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\scanner.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating scanner.c, scanner.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\MinGW\msys\1.0\bin\flex.exe -P pcap_ --header-file=scanner.h --nounput -oD:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/scanner.c D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/scanner.l
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\scanner.l;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\scanner.c;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\scanner.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating scanner.c, scanner.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\MinGW\msys\1.0\bin\flex.exe -P pcap_ --header-file=scanner.h --nounput -oD:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/scanner.c D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/scanner.l
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\scanner.l;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\scanner.c;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\scanner.h</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\94feb995bd9e112d811530a42868ea12\SerializeTarget.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\grammar.c;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\scanner.c;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\SerializeTarget</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\grammar.c;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\scanner.c;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\SerializeTarget</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\grammar.c;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\scanner.c;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\SerializeTarget</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\grammar.c;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\scanner.c;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\SerializeTarget</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Programs\CMake\bin\cmake.exe -SD:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap -BD:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build --check-stamp-file D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\3.14.5\CMakeCCompiler.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\3.14.5\CMakeCXXCompiler.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\3.14.5\CMakeRCCompiler.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\3.14.5\CMakeSystem.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake\Modules\FindDAG.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake\Modules\FindPacket.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake\Modules\FindSNF.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake\Modules\FindTC.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake_uninstall.cmake.in;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmakeconfig.h.in;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakePushCheckState.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckCCompilerFlag.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckCXXSourceCompiles.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckIncludeFiles.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckStructHasMember.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\FindPkgConfig.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Programs\CMake\bin\cmake.exe -SD:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap -BD:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build --check-stamp-file D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\3.14.5\CMakeCCompiler.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\3.14.5\CMakeCXXCompiler.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\3.14.5\CMakeRCCompiler.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\3.14.5\CMakeSystem.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake\Modules\FindDAG.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake\Modules\FindPacket.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake\Modules\FindSNF.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake\Modules\FindTC.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake_uninstall.cmake.in;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmakeconfig.h.in;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakePushCheckState.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckCCompilerFlag.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckCXXSourceCompiles.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckIncludeFiles.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckStructHasMember.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\FindPkgConfig.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Programs\CMake\bin\cmake.exe -SD:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap -BD:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build --check-stamp-file D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\3.14.5\CMakeCCompiler.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\3.14.5\CMakeCXXCompiler.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\3.14.5\CMakeRCCompiler.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\3.14.5\CMakeSystem.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake\Modules\FindDAG.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake\Modules\FindPacket.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake\Modules\FindSNF.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake\Modules\FindTC.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake_uninstall.cmake.in;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmakeconfig.h.in;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakePushCheckState.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckCCompilerFlag.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckCXXSourceCompiles.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckIncludeFiles.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckStructHasMember.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\FindPkgConfig.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Programs\CMake\bin\cmake.exe -SD:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap -BD:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build --check-stamp-file D:/A/SourceCode/Aurora/SelenaSoft/Nmap-7.70/libpcap/Build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\3.14.5\CMakeCCompiler.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\3.14.5\CMakeCXXCompiler.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\3.14.5\CMakeRCCompiler.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\3.14.5\CMakeSystem.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake\Modules\FindDAG.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake\Modules\FindPacket.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake\Modules\FindSNF.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake\Modules\FindTC.cmake;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmake_uninstall.cmake.in;D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\cmakeconfig.h.in;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakePushCheckState.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckCCompilerFlag.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckCSourceCompiles.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckCXXSourceCompiles.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckFunctionExists.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckIncludeFiles.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckLibraryExists.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckStructHasMember.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckSymbolExists.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\FindPkgConfig.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\GNUInstallDirs.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;D:\Programs\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\CMakeFiles\SerializeTarget" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\A\SourceCode\Aurora\SelenaSoft\Nmap-7.70\libpcap\Build\ZERO_CHECK.vcxproj">
+      <Project>{23ED43F1-1341-39F9-B61A-F3163B4C1143}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

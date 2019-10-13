@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{efd33193-601d-484a-bc03-755e2652e9b7}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>libdnet_strippedCent</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{D51BCBC9-82E9-4017-911E-C93873C4EA2B}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetExt>.a</TargetExt>
+    <TargetName>$(ProjectName)SD</TargetName>
+    <RemoteCCompileToolExe>gcc</RemoteCCompileToolExe>
+    <IntDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetExt>.a</TargetExt>
+    <RemoteCCompileToolExe>gcc</RemoteCCompileToolExe>
+    <TargetName>$(ProjectName)S</TargetName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="src\addr-util.c" />
+    <ClCompile Include="src\addr.c" />
+    <ClCompile Include="src\arp-ioctl.c" />
+    <ClCompile Include="src\err.c" />
+    <ClCompile Include="src\eth-linux.c" />
+    <ClCompile Include="src\intf.c" />
+    <ClCompile Include="src\ip-cooked.c" />
+    <ClCompile Include="src\ip-util.c" />
+    <ClCompile Include="src\ip6.c" />
+    <ClCompile Include="src\route-linux.c" />
+    <ClCompile Include="src\strlcat.c" />
+    <ClCompile Include="src\strlcpy.c" />
+    <ClCompile Include="src\strsep.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\config.h" />
+    <ClInclude Include="include\dnet.h" />
+    <ClInclude Include="include\dnet\addr.h" />
+    <ClInclude Include="include\dnet\arp.h" />
+    <ClInclude Include="include\dnet\icmp.h" />
+    <ClInclude Include="include\dnet\icmpv6.h" />
+    <ClInclude Include="include\dnet\intf.h" />
+    <ClInclude Include="include\dnet\ip.h" />
+    <ClInclude Include="include\dnet\ip6.h" />
+    <ClInclude Include="include\dnet\os.h" />
+    <ClInclude Include="include\dnet\route.h" />
+    <ClInclude Include="include\dnet\sctp.h" />
+    <ClInclude Include="include\dnet\tcp.h" />
+    <ClInclude Include="include\dnet\udp.h" />
+    <ClInclude Include="include\err.h" />
+    <ClInclude Include="include\queue.h" />
+    <ClInclude Include="src\crc32ct.h" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <CLanguageStandard>gnu11</CLanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <CppLanguageStandard>gnu++11</CppLanguageStandard>
+      <PreprocessorDefinitions>LINUX;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UndefinePreprocessorDefinitions>WIN32;_WIN32;WINDOWS;_WINDOWS;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include;../nbase;../nbaseCent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CAdditionalWarning />
+      <CppAdditionalWarning />
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>Copy "$(ProjectDir)bin\$(Platform)\$(Configuration)\*.a" "$(CPROGRAMS)\LibS\"
+</Command>
+    </PostBuildEvent>
+    <RemotePostBuildEvent>
+      <Command>cp -f -p $(RemoteRootDir)/$(ProjectName)/bin/$(Platform)/$(Configuration)/*.a $(RemoteRootDir)/AuroraSDK/LibS/</Command>
+    </RemotePostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <CLanguageStandard>gnu11</CLanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <CppLanguageStandard>gnu++11</CppLanguageStandard>
+      <PreprocessorDefinitions>LINUX;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UndefinePreprocessorDefinitions>WIN32;_WIN32;WINDOWS;_WINDOWS;%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+      <AdditionalIncludeDirectories>include;../nbase;../nbaseCent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CAdditionalWarning />
+      <CppAdditionalWarning />
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>Copy "$(ProjectDir)bin\$(Platform)\$(Configuration)\*.a" "$(CPROGRAMS)\LibS\"
+</Command>
+    </PostBuildEvent>
+    <RemotePostBuildEvent>
+      <Command>cp -f -p $(RemoteRootDir)/$(ProjectName)/bin/$(Platform)/$(Configuration)/*.a $(RemoteRootDir)/AuroraSDK/LibS/</Command>
+    </RemotePostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

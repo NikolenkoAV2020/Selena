@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\charpool.cc" />
+    <ClCompile Include="..\FingerPrintResults.cc" />
+    <ClCompile Include="..\FPEngine.cc" />
+    <ClCompile Include="..\FPmodel.cc" />
+    <ClCompile Include="..\idle_scan.cc" />
+    <ClCompile Include="..\MACLookup.cc" />
+    <ClCompile Include="..\main.cc" />
+    <ClCompile Include="..\NewTargets.cc" />
+    <ClCompile Include="..\nmap.cc" />
+    <ClCompile Include="..\nmap_dns.cc" />
+    <ClCompile Include="..\nmap_error.cc" />
+    <ClCompile Include="..\nmap_ftp.cc" />
+    <ClCompile Include="..\nmap_tty.cc" />
+    <ClCompile Include="..\NmapOps.cc" />
+    <ClCompile Include="..\NmapOutputTable.cc" />
+    <ClCompile Include="..\nse_debug.cc" />
+    <ClCompile Include="..\nse_fs.cc" />
+    <ClCompile Include="..\nse_libssh2.cc" />
+    <ClCompile Include="..\nse_lpeg.cc" />
+    <ClCompile Include="..\nse_main.cc" />
+    <ClCompile Include="..\nse_utility.cc" />
+    <ClCompile Include="..\nse_nmaplib.cc" />
+    <ClCompile Include="..\nse_nsock.cc" />
+    <ClCompile Include="..\nse_dnet.cc" />
+    <ClCompile Include="..\nse_openssl.cc" />
+    <ClCompile Include="..\nse_pcrelib.cc" />
+    <ClCompile Include="..\nse_ssl_cert.cc" />
+    <ClCompile Include="..\nse_zlib.cc" />
+    <ClCompile Include="..\osscan.cc" />
+    <ClCompile Include="..\osscan2.cc" />
+    <ClCompile Include="..\output.cc" />
+    <ClCompile Include="..\payload.cc" />
+    <ClCompile Include="..\portlist.cc" />
+    <ClCompile Include="..\portreasons.cc" />
+    <ClCompile Include="..\protocols.cc" />
+    <ClCompile Include="..\scan_engine.cc" />
+    <ClCompile Include="..\scan_engine_connect.cc" />
+    <ClCompile Include="..\scan_engine_raw.cc" />
+    <ClCompile Include="..\scan_lists.cc" />
+    <ClCompile Include="..\service_scan.cc" />
+    <ClCompile Include="..\services.cc" />
+    <ClCompile Include="..\Target.cc" />
+    <ClCompile Include="..\TargetGroup.cc" />
+    <ClCompile Include="..\targets.cc" />
+    <ClCompile Include="..\tcpip.cc" />
+    <ClCompile Include="..\timing.cc" />
+    <ClCompile Include="..\traceroute.cc" />
+    <ClCompile Include="..\utils.cc" />
+    <ClCompile Include="..\xml.cc" />
+    <ClCompile Include="winfix.cc" />
+    <ClCompile Include="..\..\SourceCommon\DecodeCommandString.cc">
+      <Filter>CommonSource</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\charpool.h" />
+    <ClInclude Include="..\FingerPrintResults.h" />
+    <ClInclude Include="..\FPEngine.h" />
+    <ClInclude Include="..\idle_scan.h" />
+    <ClInclude Include="..\MACLookup.h" />
+    <ClInclude Include="..\NewTargets.h" />
+    <ClInclude Include="..\nmap.h" />
+    <ClInclude Include="..\nmap_dns.h" />
+    <ClInclude Include="..\nmap_error.h" />
+    <ClInclude Include="..\nmap_ftp.h" />
+    <ClInclude Include="..\nmap_tty.h" />
+    <ClInclude Include="..\nmap_winconfig.h" />
+    <ClInclude Include="..\NmapOps.h" />
+    <ClInclude Include="..\NmapOutputTable.h" />
+    <ClInclude Include="..\nse_debug.h" />
+    <ClInclude Include="..\nse_fs.h" />
+    <ClInclude Include="..\nse_libssh2.h" />
+    <ClInclude Include="..\nse_lpeg.h" />
+    <ClInclude Include="..\nse_main.h" />
+    <ClInclude Include="..\nse_utility.h" />
+    <ClInclude Include="..\nse_nmaplib.h" />
+    <ClInclude Include="..\nse_nsock.h" />
+    <ClInclude Include="..\nse_dnet.h" />
+    <ClInclude Include="..\nse_openssl.h" />
+    <ClInclude Include="..\nse_pcrelib.h" />
+    <ClInclude Include="..\nse_ssl_cert.h" />
+    <ClInclude Include="..\nse_zlib.h" />
+    <ClInclude Include="..\osscan.h" />
+    <ClInclude Include="..\osscan2.h" />
+    <ClInclude Include="..\output.h" />
+    <ClInclude Include="..\payload.h" />
+    <ClInclude Include="..\portlist.h" />
+    <ClInclude Include="..\portreasons.h" />
+    <ClInclude Include="..\probespec.h" />
+    <ClInclude Include="..\protocols.h" />
+    <ClInclude Include="..\scan_engine.h" />
+    <ClInclude Include="..\scan_engine_connect.h" />
+    <ClInclude Include="..\scan_engine_raw.h" />
+    <ClInclude Include="..\scan_lists.h" />
+    <ClInclude Include="..\service_scan.h" />
+    <ClInclude Include="..\services.h" />
+    <ClInclude Include="..\targets.h" />
+    <ClInclude Include="..\tcpip.h" />
+    <ClInclude Include="..\timing.h" />
+    <ClInclude Include="..\traceroute.h" />
+    <ClInclude Include="..\utils.h" />
+    <ClInclude Include="..\xml.h" />
+    <ClInclude Include="winfix.h" />
+    <ClInclude Include="..\..\SourceCommon\DecodeCommandString.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SourceCommon\LibNmapScan.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SourceCommon\SelenaSafeObject.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\nmap-mac-prefixes" />
+    <CustomBuild Include="..\nmap-os-db" />
+    <CustomBuild Include="..\docs\nmap.xsl" />
+    <CustomBuild Include="..\nmap-payloads">
+      <Filter>Resource</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\nmap-protocols">
+      <Filter>Resource</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\nmap-rpc">
+      <Filter>Resource</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\nmap-service-probes">
+      <Filter>Resource</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\nmap-services">
+      <Filter>Resource</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="nmap.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon1.ico" />
+    <None Include="..\nse_main.lua">
+      <Filter>Resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CommonSource">
+      <UniqueIdentifier>{dcca578d-f7dc-4a1c-9b5d-a411b62e53ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{12eb9609-7f0b-44d2-b9f1-99dabca3a5df}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

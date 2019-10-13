@@ -1,0 +1,25 @@
+From 3cfa70e2411af41a0f175e5b6100780c655189b1 Mon Sep 17 00:00:00 2001
+From: Daniel Miller <dmiller@nmap.com>
+Date: Sat, 22 Nov 2014 06:33:55 -0800
+Subject: [PATCH 13/14] Don't build serf.dll (static build only)
+
+---
+ src-trunk/serf/SConstruct | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src-trunk/serf/SConstruct b/src-trunk/serf/SConstruct
+index 800e1ea..3e2937f 100644
+--- a/src-trunk/serf/SConstruct
++++ b/src-trunk/serf/SConstruct
+@@ -385,7 +385,7 @@ pkgconfig = env.Textfile('serf-%d.pc' % (MAJOR,),
+                                                        env.get('GSSAPI_LIBS', '')),
+                            })
+ 
+-env.Default(lib_static, lib_shared, pkgconfig)
++env.Default(lib_static, pkgconfig)
+ 
+ if CALLOUT_OKAY:
+   conf = Configure(env)
+-- 
+2.1.1
+

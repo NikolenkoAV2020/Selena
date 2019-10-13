@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="CommonSource">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SourceCommon\ConsolColor.cpp">
+      <Filter>CommonSource</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceCommon\ConsolCursor.cpp">
+      <Filter>CommonSource</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceCommon\GetIPBeadRoll.cpp">
+      <Filter>CommonSource</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceCommon\NetWinUnixCompat.cpp">
+      <Filter>CommonSource</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceCommon\SelenaConfig.cpp">
+      <Filter>CommonSource</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceCommon\SelenaGlobal.cpp">
+      <Filter>CommonSource</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceCommon\SelenaSocket.cpp">
+      <Filter>CommonSource</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceCommon\SelenaSocketReadMessage.cpp">
+      <Filter>CommonSource</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceCommon\SelenaSocketWriteMessage.cpp">
+      <Filter>CommonSource</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceCommon\SelenaStrings.cpp">
+      <Filter>CommonSource</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceCommon\Stun.cpp">
+      <Filter>CommonSource</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceClient\SelenaClient.cpp" />
+    <ClCompile Include="SourceClient\SelenaClientFastCom.cpp" />
+    <ClCompile Include="SourceClient\SelenaClientGlobal.cpp" />
+    <ClCompile Include="SourceClient\SelenaClientHandler.cpp" />
+    <ClCompile Include="SourceClient\SelenaClientMsgSrv.cpp" />
+    <ClCompile Include="SourceClient\SelenaClientReader.cpp" />
+    <ClCompile Include="SourceClient\SelenaClientWriter.cpp" />
+    <ClCompile Include="SourceCommon\SelenaJob.cpp">
+      <Filter>CommonSource</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceClient\SelenaClientSendResToServ.cpp" />
+    <ClCompile Include="SourceClient\SelenaClientSendScanFailToServ.cpp" />
+    <ClCompile Include="SourceClient\SelenaClientScanRun.cpp" />
+    <ClCompile Include="SourceClient\SelenaClientScan.cpp" />
+    <ClCompile Include="SourceClient\SelenaClientMergeFiles.cpp" />
+    <ClCompile Include="SourceCommon\IpAddressTrawler.cpp">
+      <Filter>CommonSource</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SourceCommon\ConsolColor.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\GetIPBeadRoll.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\LibMasScan.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\NetWinUnixCompat.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\SelenaConfig.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\SelenaGlobal.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\SelenaJob.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\SelenaSafeMessage.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\SelenaSafeObject.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\SelenaSocket.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\SelenaStrings.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\SelenaThreads.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\Stun.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\StunMini.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceClient\SelenaClient.h" />
+    <ClInclude Include="SourceClient\SelenaClientGlobal.h" />
+    <ClInclude Include="SourceCommon\LibNmapScan.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\SelenaTimer.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\IpAddressTrawler.h">
+      <Filter>CommonSource</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

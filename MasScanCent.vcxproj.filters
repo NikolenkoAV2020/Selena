@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{fe52117c-b2eb-45e4-84c8-83d560a1430d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\CommonSource">
+      <UniqueIdentifier>{bb683b62-d3cb-42a2-a628-57572c0808c4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="masscan-1.0.5\src\crypto-base64.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\crypto-blackrock2.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\event-timeout.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\in-binary.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\in-filter.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\in-report.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\logger.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\main.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\main-conf.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\main-dedup.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\main-initadapter.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\main-listscan.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\main-ptrace.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\main-readrange.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\main-src.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\main-status.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\main-throttle.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\masscan-app.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\out-binary.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\out-certs.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\out-grepable.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\out-json.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\out-ndjson.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\out-null.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\output.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\out-redis.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\out-text.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\out-unicornscan.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\out-xml.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\pixie-backtrace.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\pixie-file.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\pixie-threads.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\pixie-timer.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-arp.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-banner1.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-banout.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-dns.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-ftp.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-http.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-icmp.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-imap4.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-interactive.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-memcached.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-netbios.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-ntp.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-pop3.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-preprocess.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-sctp.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-smtp.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-snmp.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-ssh.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-ssl.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-ssl-test.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-tcp.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-tcp-telnet.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-udp.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-vnc.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-x509.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\proto-zeroaccess.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\rand-blackrock.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\rand-lcg.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\rand-primegen.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\ranges.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\rawsock.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\rawsock-arp.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\rawsock-getif.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\rawsock-getip.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\rawsock-getmac.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\rawsock-getroute.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\rawsock-pcap.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\rawsock-pcapfile.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\rawsock-pfring.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\rte-ring.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\script.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\script-heartbleed.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\script-ntp-monlist.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\script-sslv3.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\siphash24.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\smack1.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\smackqueue.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\string_s.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\syn-cookie.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\templ-payloads.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\templ-pkt.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="masscan-1.0.5\src\xring.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceCommon\DecodeCommandString.cc">
+      <Filter>Source\CommonSource</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="masscan-1.0.5\src\crypto-base64.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\event-timeout.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\in-binary.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\in-filter.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\in-report.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\logger.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\main-dedup.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\main-globals.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\main-ptrace.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\main-readrange.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\main-src.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\main-status.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\main-throttle.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\masscan.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\masscan-app.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\masscan-status.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\masscan-version.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\output.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\out-record.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\packet-queue.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\pixie-backtrace.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\pixie-file.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\pixie-sockets.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\pixie-threads.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\pixie-timer.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-arp.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-banner1.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-banout.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-dns.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-dns-parse.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-ftp.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-http.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-icmp.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-imap4.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-interactive.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-memcached.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-netbios.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-ntp.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-pop3.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-preprocess.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-sctp.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-smtp.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-snmp.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-ssh.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-ssl.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-tcp.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-tcp-telnet.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-udp.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-vnc.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-x509.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\proto-zeroaccess.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\rand-blackrock.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\rand-lcg.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\rand-primegen.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\ranges.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\rawsock.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\rawsock-adapter.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\rawsock-pcap.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\rawsock-pcapfile.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\rawsock-pfring.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\rte-ring.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\script.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\siphash24.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\smack.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\smackqueue.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\string_s.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\syn-cookie.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\templ-payloads.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\templ-pkt.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\templ-port.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\unusedparm.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="masscan-1.0.5\src\xring.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\DecodeCommandString.h">
+      <Filter>Source\CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\LibMasScan.h">
+      <Filter>Source\CommonSource</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceCommon\SelenaMessage.h">
+      <Filter>Source\CommonSource</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

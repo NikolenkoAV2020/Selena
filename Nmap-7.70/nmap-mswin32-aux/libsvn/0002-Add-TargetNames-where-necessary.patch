@@ -1,0 +1,284 @@
+From 5785b08c023aa38c5d1f4a26af18690d53d496bf Mon Sep 17 00:00:00 2001
+From: Daniel Miller <dmiller@nmap.com>
+Date: Wed, 19 Nov 2014 12:09:33 -0800
+Subject: [PATCH 02/14] Add TargetNames where necessary
+
+---
+ apr-iconv/apriconv.vcxproj                 | 1 +
+ apr-iconv/libapriconv.vcxproj              | 1 +
+ apr-util/aprutil.vcxproj                   | 1 +
+ apr-util/crypto/apr_crypto_nss.vcxproj     | 1 +
+ apr-util/crypto/apr_crypto_openssl.vcxproj | 1 +
+ apr-util/dbd/apr_dbd_freetds.vcxproj       | 1 +
+ apr-util/dbd/apr_dbd_mysql.vcxproj         | 1 +
+ apr-util/dbd/apr_dbd_odbc.vcxproj          | 1 +
+ apr-util/dbd/apr_dbd_oracle.vcxproj        | 1 +
+ apr-util/dbd/apr_dbd_pgsql.vcxproj         | 1 +
+ apr-util/dbd/apr_dbd_sqlite2.vcxproj       | 1 +
+ apr-util/dbd/apr_dbd_sqlite3.vcxproj       | 1 +
+ apr-util/dbm/apr_dbm_db.vcxproj            | 1 +
+ apr-util/dbm/apr_dbm_gdbm.vcxproj          | 1 +
+ apr-util/ldap/apr_ldap.vcxproj             | 1 +
+ apr-util/libaprutil.vcxproj                | 1 +
+ apr-util/xml/expat/lib/xml.vcxproj         | 1 +
+ apr/apr.vcxproj                            | 1 +
+ apr/build/aprapp.vcxproj                   | 1 +
+ apr/build/libaprapp.vcxproj                | 1 +
+ apr/libapr.vcxproj                         | 1 +
+ 21 files changed, 21 insertions(+)
+
+diff --git a/apr-iconv/apriconv.vcxproj b/apr-iconv/apriconv.vcxproj
+index f7f2dcb..61200e9 100755
+--- a/apr-iconv/apriconv.vcxproj
++++ b/apr-iconv/apriconv.vcxproj
+@@ -105,6 +105,7 @@
+     <LinkIncremental>false</LinkIncremental>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>apriconv-1</TargetName>
+     <OutDir>.\LibR\</OutDir>
+     <IntDir>.\LibR\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr-iconv/libapriconv.vcxproj b/apr-iconv/libapriconv.vcxproj
+index a5f1dc8..94c97d3 100755
+--- a/apr-iconv/libapriconv.vcxproj
++++ b/apr-iconv/libapriconv.vcxproj
+@@ -90,6 +90,7 @@
+   </ImportGroup>
+   <PropertyGroup Label="UserMacros" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>libapriconv-1</TargetName>
+     <OutDir>.\Release\</OutDir>
+     <IntDir>.\Release\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr-util/aprutil.vcxproj b/apr-util/aprutil.vcxproj
+index 273a8ba..360489a 100755
+--- a/apr-util/aprutil.vcxproj
++++ b/apr-util/aprutil.vcxproj
+@@ -105,6 +105,7 @@
+     <LinkIncremental>true</LinkIncremental>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>aprutil-1</TargetName>
+     <OutDir>.\LibR\</OutDir>
+     <IntDir>.\LibR\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr-util/crypto/apr_crypto_nss.vcxproj b/apr-util/crypto/apr_crypto_nss.vcxproj
+index 72b14c9..e228a4d 100755
+--- a/apr-util/crypto/apr_crypto_nss.vcxproj
++++ b/apr-util/crypto/apr_crypto_nss.vcxproj
+@@ -90,6 +90,7 @@
+   </ImportGroup>
+   <PropertyGroup Label="UserMacros" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>apr_crypto_nss-1</TargetName>
+     <OutDir>.\Release\</OutDir>
+     <IntDir>.\Release\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr-util/crypto/apr_crypto_openssl.vcxproj b/apr-util/crypto/apr_crypto_openssl.vcxproj
+index cfc26e6..7ea91af 100755
+--- a/apr-util/crypto/apr_crypto_openssl.vcxproj
++++ b/apr-util/crypto/apr_crypto_openssl.vcxproj
+@@ -90,6 +90,7 @@
+   </ImportGroup>
+   <PropertyGroup Label="UserMacros" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>apr_crypto_openssl-1</TargetName>
+     <OutDir>.\Release\</OutDir>
+     <IntDir>.\Release\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr-util/dbd/apr_dbd_freetds.vcxproj b/apr-util/dbd/apr_dbd_freetds.vcxproj
+index 439d7b3..7b399b1 100755
+--- a/apr-util/dbd/apr_dbd_freetds.vcxproj
++++ b/apr-util/dbd/apr_dbd_freetds.vcxproj
+@@ -95,6 +95,7 @@
+     <LinkIncremental>false</LinkIncremental>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>apr_dbd_freetds-1</TargetName>
+     <OutDir>.\Release\</OutDir>
+     <IntDir>.\Release\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr-util/dbd/apr_dbd_mysql.vcxproj b/apr-util/dbd/apr_dbd_mysql.vcxproj
+index f834554..0c0f1fa 100755
+--- a/apr-util/dbd/apr_dbd_mysql.vcxproj
++++ b/apr-util/dbd/apr_dbd_mysql.vcxproj
+@@ -95,6 +95,7 @@
+     <LinkIncremental>false</LinkIncremental>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>apr_dbd_mysql-1</TargetName>
+     <OutDir>.\Release\</OutDir>
+     <IntDir>.\Release\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr-util/dbd/apr_dbd_odbc.vcxproj b/apr-util/dbd/apr_dbd_odbc.vcxproj
+index bf31740..70f9bff 100755
+--- a/apr-util/dbd/apr_dbd_odbc.vcxproj
++++ b/apr-util/dbd/apr_dbd_odbc.vcxproj
+@@ -105,6 +105,7 @@
+     <LinkIncremental>false</LinkIncremental>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>apr_dbd_odbc-1</TargetName>
+     <OutDir>.\Release\</OutDir>
+     <IntDir>.\Release\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr-util/dbd/apr_dbd_oracle.vcxproj b/apr-util/dbd/apr_dbd_oracle.vcxproj
+index 1e9cd2e..f9dc282 100755
+--- a/apr-util/dbd/apr_dbd_oracle.vcxproj
++++ b/apr-util/dbd/apr_dbd_oracle.vcxproj
+@@ -90,6 +90,7 @@
+   </ImportGroup>
+   <PropertyGroup Label="UserMacros" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>apr_dbd_oracle-1</TargetName>
+     <OutDir>.\Release\</OutDir>
+     <IntDir>.\Release\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr-util/dbd/apr_dbd_pgsql.vcxproj b/apr-util/dbd/apr_dbd_pgsql.vcxproj
+index 4999107..2bd02f1 100755
+--- a/apr-util/dbd/apr_dbd_pgsql.vcxproj
++++ b/apr-util/dbd/apr_dbd_pgsql.vcxproj
+@@ -90,6 +90,7 @@
+   </ImportGroup>
+   <PropertyGroup Label="UserMacros" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>apr_dbd_pgsql-1</TargetName>
+     <OutDir>.\Release\</OutDir>
+     <IntDir>.\Release\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr-util/dbd/apr_dbd_sqlite2.vcxproj b/apr-util/dbd/apr_dbd_sqlite2.vcxproj
+index 388f196..208340e 100755
+--- a/apr-util/dbd/apr_dbd_sqlite2.vcxproj
++++ b/apr-util/dbd/apr_dbd_sqlite2.vcxproj
+@@ -90,6 +90,7 @@
+   </ImportGroup>
+   <PropertyGroup Label="UserMacros" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>apr_dbd_sqlite2-1</TargetName>
+     <OutDir>.\Release\</OutDir>
+     <IntDir>.\Release\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr-util/dbd/apr_dbd_sqlite3.vcxproj b/apr-util/dbd/apr_dbd_sqlite3.vcxproj
+index f102a48..73a08b3 100755
+--- a/apr-util/dbd/apr_dbd_sqlite3.vcxproj
++++ b/apr-util/dbd/apr_dbd_sqlite3.vcxproj
+@@ -90,6 +90,7 @@
+   </ImportGroup>
+   <PropertyGroup Label="UserMacros" />
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>apr_dbd_sqlite3-1</TargetName>
+     <OutDir>.\Release\</OutDir>
+     <IntDir>.\Release\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr-util/dbm/apr_dbm_db.vcxproj b/apr-util/dbm/apr_dbm_db.vcxproj
+index d3c7e77..28c5971 100755
+--- a/apr-util/dbm/apr_dbm_db.vcxproj
++++ b/apr-util/dbm/apr_dbm_db.vcxproj
+@@ -105,6 +105,7 @@
+     <LinkIncremental>false</LinkIncremental>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>apr_dbm_db-1</TargetName>
+     <OutDir>.\Release\</OutDir>
+     <IntDir>.\Release\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr-util/dbm/apr_dbm_gdbm.vcxproj b/apr-util/dbm/apr_dbm_gdbm.vcxproj
+index 488839e..0401527 100755
+--- a/apr-util/dbm/apr_dbm_gdbm.vcxproj
++++ b/apr-util/dbm/apr_dbm_gdbm.vcxproj
+@@ -105,6 +105,7 @@
+     <LinkIncremental>false</LinkIncremental>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>apr_dbm_gdbm-1</TargetName>
+     <OutDir>.\Release\</OutDir>
+     <IntDir>.\Release\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr-util/ldap/apr_ldap.vcxproj b/apr-util/ldap/apr_ldap.vcxproj
+index dee0ecd..ebe70ad 100755
+--- a/apr-util/ldap/apr_ldap.vcxproj
++++ b/apr-util/ldap/apr_ldap.vcxproj
+@@ -100,6 +100,7 @@
+     <LinkIncremental>false</LinkIncremental>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>apr_ldap-1</TargetName>
+     <OutDir>.\Release\</OutDir>
+     <IntDir>.\Release\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr-util/libaprutil.vcxproj b/apr-util/libaprutil.vcxproj
+index 05bfcb6..db94f64 100755
+--- a/apr-util/libaprutil.vcxproj
++++ b/apr-util/libaprutil.vcxproj
+@@ -95,6 +95,7 @@
+     <LinkIncremental>false</LinkIncremental>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>libaprutil-1</TargetName>
+     <OutDir>.\Release\</OutDir>
+     <IntDir>.\Release\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr-util/xml/expat/lib/xml.vcxproj b/apr-util/xml/expat/lib/xml.vcxproj
+index 300decd..6c10de7 100755
+--- a/apr-util/xml/expat/lib/xml.vcxproj
++++ b/apr-util/xml/expat/lib/xml.vcxproj
+@@ -99,6 +99,7 @@
+     <LinkIncremental>true</LinkIncremental>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>xml</TargetName>
+     <OutDir>.\LibR\</OutDir>
+     <IntDir>.\LibR\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr/apr.vcxproj b/apr/apr.vcxproj
+index 39079a7..98cccd7 100755
+--- a/apr/apr.vcxproj
++++ b/apr/apr.vcxproj
+@@ -134,6 +134,7 @@
+     <LinkIncremental>false</LinkIncremental>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>apr-1</TargetName>
+     <OutDir>.\LibR\</OutDir>
+     <IntDir>.\LibR\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr/build/aprapp.vcxproj b/apr/build/aprapp.vcxproj
+index d9aca2f..283654e 100755
+--- a/apr/build/aprapp.vcxproj
++++ b/apr/build/aprapp.vcxproj
+@@ -139,6 +139,7 @@
+     <LinkIncremental>false</LinkIncremental>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>aprapp-1</TargetName>
+     <OutDir>.\..\LibR\</OutDir>
+     <IntDir>.\LibR\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr/build/libaprapp.vcxproj b/apr/build/libaprapp.vcxproj
+index e854813..0db9365 100755
+--- a/apr/build/libaprapp.vcxproj
++++ b/apr/build/libaprapp.vcxproj
+@@ -149,6 +149,7 @@
+     <LinkIncremental>false</LinkIncremental>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>libaprapp-1</TargetName>
+     <OutDir>.\..\Release\</OutDir>
+     <IntDir>.\Release\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+diff --git a/apr/libapr.vcxproj b/apr/libapr.vcxproj
+index 456cddc..9b806d1 100755
+--- a/apr/libapr.vcxproj
++++ b/apr/libapr.vcxproj
+@@ -149,6 +149,7 @@
+     <LinkIncremental>false</LinkIncremental>
+   </PropertyGroup>
+   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
++<TargetName>libapr-1</TargetName>
+     <OutDir>.\Release\</OutDir>
+     <IntDir>.\Release\</IntDir>
+     <LinkIncremental>false</LinkIncremental>
+-- 
+2.1.1
+

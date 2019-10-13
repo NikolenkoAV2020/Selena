@@ -1,0 +1,33 @@
+From 1f1f388235ca13c6afcb463e18a5d65943a0796d Mon Sep 17 00:00:00 2001
+From: Daniel Miller <dmiller@nmap.com>
+Date: Sat, 22 Nov 2014 05:23:08 -0800
+Subject: [PATCH 11/14] Add some more ignores
+
+---
+ .gitignore | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+diff --git a/.gitignore b/.gitignore
+index 751553b..565c059 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,16 @@
+ *.bak
++*.obj
++*.lib
++*.dll
++*.exe
++*.pdb
++*.pch
++Release/
++LibR/
++*.suo
++*.py[co]
++*.idb
++*.log
++*.sdf
++*.suo
++*.opensdf
+-- 
+2.1.1
+
